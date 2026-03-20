@@ -17,7 +17,7 @@ class FaffMenubar(rumps.App):
     def update_title(self, _=None):
         try:
             current_task = ws.logs.get_log(ws.today()).active_session()
-            self.title = f"ﬀ: {current_task.alias}" if current_task else "ﬀ: Resting..."
+            self.title = f"ﬀ: {current_task.title}" if current_task else "ﬀ: Resting..."
         except Exception:
             self.title = "ﬀ: Error"
 
